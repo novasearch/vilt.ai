@@ -1,12 +1,283 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Portuguese GlórIA dataset</title>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="GlórIA: A Generative and Open Large Language Model for Portuguese.">
+  <meta name="keywords" content="GlórIA, PT LLM, PT-PT LLM">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GlórIA: A Generative and Open Large Language Model for Portuguese.</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
 <body>
-<h1>Portuguese GlórIA dataset</h1>
-The GlórIA dataset contains over 35 billion tokens in Portuguese language with a strong bias to European Portuguese. This is the largest European Portuguese Corpus collected from several different sources and curated with several quality control methods.
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://vilt.ai">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://www.amazon.science/alexa-prize/proceedings/twiz-the-wizard-of-multimodal-conversational-stimulus">
+            TWIZ - Alexa Taskbot
+          </a>
+          <a class="navbar-item" href="https://vilt.ai/multimodal-diachronic-models">
+            Diachronic Multimodal Embeddings
+          </a>
+          <a class="navbar-item" href="https://vilt.ai/social-stories">
+            Social Stories
+          </a>
+          <a class="navbar-item" href="">
+            Other
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">GlórIA: A Generative and Open Large Language Model for Portuguese</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/r-valverde/">Ricardo Lopes</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/joao-magalhaes-74977113/">João Magalhães</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/david-semedo/">David Semedo</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>NOVA School of Science and Technology, Portugal</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://aclanthology.org/2024.propor-1.45/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2402.12969"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/rvlopes/glorIA-code"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- HuggingFace Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/NOVA-vision-language/GlorIA-1.3B"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Model</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      
+      <img style="height:17vh; display: block; margin-left: auto; margin-right: auto;" src="./static/images/GlorIA_logo_cropped.png" alt="GlorIA logo" class="logo"/>
+      <h2 class="subtitle has-text-centered">
+        <p style="margin-bottom:1%;"></p>
+        <b>GlórIA</b> is a large generative language model, with special focus on European Portuguese.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Significant strides have been made in natural language tasks, largely attributed to the emergence of powerful large language models (LLMs). These models, pre-trained on extensive and diverse corpora, have become increasingly capable of comprehending the intricacies of language. Despite the abundance of LLMs for many high-resource languages, the availability of such models remains limited for European Portuguese. 
+          </p>
+          <p>
+            We introduce <b>GlórIA</b>, a robust European Portuguese decoder LLM. To pre-train <b>GlórIA</b>, we assembled a comprehensive PT-PT text corpus comprising 35 billion tokens from various sources. We present our pre-training methodology, followed by an assessment of the model's effectiveness on multiple downstream tasks. Additionally, to evaluate our models' language modeling capabilities, we introduce CALAME-PT (Context-Aware LAnguage Modeling Evaluation for Portuguese), the first Portuguese zero-shot language-modeling benchmark.
+          </p>
+          <p>
+            Evaluation shows that <b>GlórIA</b> significantly outperforms existing open PT decoder models in language modeling and that it can generate sound, knowledge-rich, and coherent PT-PT text. The model also exhibits strong potential for various downstream tasks.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Resources</h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">Training Data</h3>
+        <div class="content has-text-justified">
+          <p>
+            GlórIA 1.3B was trained on a large corpora, with approximately 35B tokens. This corpus was built by gathering multiple Portuguese sources:
+            <ul>
+              <li><b>ArquivoPT News PT-PT Dataset</b>: A collection of 1.4M European Portuguese archived news and periodicals from Arquivo.pt.</li>
+              <li><b>ClueWeb-Large PT-PT</b>: Multilingual Corpus, similar to OSCAR. Metadata was used to filter only PT-PT webpages.</li>
+              <li><b>Europarl PT-PT</b>: A parallel corpus with documents such as transcripts from the European Parliament (we only used the PT-PT documents).</li>
+              <li><b>OpenSubtitles PT-PT</b>: A corpus containing PT-PT subtitles from OpenSubtitles.</li>
+              <li><b>OSCAR PT-PT</b>: Multilingual Corpus obtained from filtering the Common Crawl corpus. We used metadata to filter only PT-PT webpages.</li>
+              <li><b>PT WIKI</b>: The Portuguese Wikipedia. 2022/06/20 Dump.</li>
+            </ul>
+            
+          </p>
+        </div>
+
+        <h3 class="title is-4">Getting the Data</h3>
+        <div class="content has-text-justified">
+          <p>
+            Please complete the following form to access the data:
+          </p>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeHfIvMjoeRM1TkZIM5CFYVFKhEVqQoZ2pMlvO4AqkCN3HYOA/viewform?embedded=true" width="640" height="1143" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+          
+        </div>
+        <br/>
+        <!--/ Interpolating. -->
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{lopes-etal-2024-gloria,
+      title = "{G}l{\'o}r{IA}: A Generative and Open Large Language Model for {P}ortuguese",
+      author = "Lopes, Ricardo  and
+        Magalhaes, Joao  and
+        Semedo, David",
+      editor = "Gamallo, Pablo  and
+        Claro, Daniela  and
+        Teixeira, Ant{\'o}nio  and
+        Real, Livy  and
+        Garcia, Marcos  and
+        Oliveira, Hugo Gon{\c{c}}alo  and
+        Amaro, Raquel",
+      booktitle = "Proceedings of the 16th International Conference on Computational Processing of Portuguese",
+      month = mar,
+      year = "2024",
+      address = "Santiago de Compostela, Galicia/Spain",
+      publisher = "Association for Computational Lingustics",
+      url = "https://aclanthology.org/2024.propor-1.45",
+      pages = "441--453",
+  }
+  </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is adapted from <a
+            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
-
